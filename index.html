@@ -8,38 +8,38 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{
     background:#fff;
-    font-family:system-ui,-apple-system,sans-serif;
     text-align:center;
-    line-height:1.1;
+    font-family:system-ui,-apple-system,sans-serif;
   }
-  .hero{
-    width:10%;
-    background:url('https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251204_010250_Lumii%20-%20Photo%20Editor.jpg?raw=true') center top / 100% auto no-repeat;
-    background-attachment:scroll;
-    padding:10px 2px 18px;
+  /* Full background image — shows the real top of the picture */
+  .bg{
+    width:100%;
+    height:auto;
+    display:block;
   }
   .logo{
     width:75%;
     max-width:660px;
-    margin:0 auto;
+    margin:-80px auto 60px;   /* pulls logo up a little so it sits right under the image */
+    position:relative;
+    z-index:10;
+    filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5));
   }
   h1{
     font-size:11rem;
     font-weight:900;
     color:#fff;
     -webkit-text-stroke:12px #000;
-    text-stroke:12px #000;
     paint-order:stroke fill;
     letter-spacing:8px;
-    margin:60px 0 80px;
+    margin:40px 0 80px;
   }
   .content{
-    padding:80px 20px 140px;
+    padding:60px 20px 140px;
     background:#fff;
   }
   .ca{
-    background:#000;
-    color:#fff;
+    background:#000;color:#fff;
     padding:44px 40px;
     border-radius:60px;
     max-width:860px;
@@ -50,40 +50,27 @@
     box-shadow:0 25px 50px rgba(0,0,0,0.4);
   }
   .copy{
-    background:#fff;
-    color:#000;
-    border:none;
-    padding:20px 70px;
-    border-radius:60px;
-    font-size:2.4rem;
-    font-weight:900;
-    cursor:pointer;
+    background:#fff;color:#000;
+    border:none;padding:20px 70px;
+    border-radius:60px;font-size:2.4rem;
+    font-weight:900;cursor:pointer;
     margin-top:25px;
     box-shadow:0 15px 30px rgba(0,0,0,0.3);
   }
   .btn{
     display:inline-block;
-    background:#000;
-    color:#fff;
-    font-size:4.2rem;
-    font-weight:900;
-    padding:32px 90px;
-    margin:35px;
-    border-radius:80px;
-    text-decoration:none;
+    background:#000;color:#fff;
+    font-size:4.2rem;font-weight:900;
+    padding:32px 90px;margin:35px;
+    border-radius:80px;text-decoration:none;
     box-shadow:0 25px 50px rgba(0,0,0,0.4);
-    transition:transform .2s;
   }
-  .btn:active{transform:translateY(8px)}
   .coming{
-    font-size:6.8rem;
-    font-weight:900;
+    font-size:6.8rem;font-weight:900;
     color:#000;
     -webkit-text-stroke:10px #fff;
-    text-stroke:10px #fff;
     paint-order:stroke fill;
-    margin:120px 20px;
-    line-height:1.2;
+    margin:120px 20px;line-height:1.2;
   }
   .copied{
     position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
@@ -92,8 +79,8 @@
     transition:.4s;box-shadow:0 0 60px #000;
   }
   @media(max-width:640px){
-    .hero{padding:60px 15px 100px}
-    h1{font-size:6.8rem;-webkit-text-stroke:8px #000;margin:40px 0 60px}
+    .logo{margin:-40px auto 40px;width:82%}
+    h1{font-size:6.8rem;-webkit-text-stroke:8px #000;margin:30px 0 60px}
     .ca{font-size:1.9rem;padding:36px 30px}
     .btn{font-size:3rem;padding:26px 60px}
     .coming{font-size:4.5rem;-webkit-text-stroke:7px #fff}
@@ -102,10 +89,13 @@
 </head>
 <body>
 
-<div class="hero">
-  <img src="https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251203_231111_Chrome.jpg?raw=true" alt="$WOJANE" class="logo">
-  <h1>$WOJANE</h1>
-</div>
+<!-- Background image as a normal <img> so it shows the real top and scales perfectly -->
+<img src="https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251204_010250_Lumii%20-%20Photo%20Editor.jpg?raw=true" alt="background" class="bg">
+
+<!-- Logo sits perfectly under the image -->
+<img src="https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251203_231111_Chrome.jpg?raw=true" alt="$WOJANE" class="logo">
+
+<h1>$WOJANE</h1>
 
 <div class="content">
   <div class="ca">
@@ -114,24 +104,4 @@
     <button class="copy" onclick="copyCA()">COPY CA</button>
   </div>
 
-  <a href="https://jup.ag/tokens/J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump" class="btn" target="_blank">BUY WOJANE</a>
-  <a href="https://x.com/WOJANE_" class="btn" target="_blank">X / TWITTER</a>
-
-  <div class="coming">
-    AMM • FARMING • NFTS • AND MORE<br>
-    COMING SOON
-  </div>
-</div>
-
-<div class="copied" id="copied">COPIED!</div>
-
-<script>
-function copyCA(){
-  navigator.clipboard.writeText("J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump");
-  document.getElementById("copied").style.opacity="1";
-  setTimeout(()=>document.getElementById("copied").style.opacity="0",1600);
-}
-</script>
-
-</body>
-</html>
+  <a href="https://jup.ag/tokens/J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqa
