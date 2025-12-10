@@ -78,4 +78,54 @@
   }
   .copied{
     position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
-    background:#000;color:#fff;padding
+    background:#000;color:#fff;padding:35px 90px;
+    border-radius:70px;font-size:4.5rem;z-index:999;opacity:0;
+    transition:.4s;box-shadow:0 0 70px #000;
+  }
+  @media(max-width:640px){
+    .logo{margin:-10% auto 40px;width:84%}
+    h1{font-size:7rem;-webkit-text-stroke:9px #000;margin:30px 0 60px}
+    .ca{font-size:2rem;padding:40px 25px}
+    .btn{font-size:3.3rem;padding:28px 60px}
+    .coming{font-size:4.8rem;-webkit-text-stroke:8px #fff}
+  }
+</style>
+</head>
+<body>
+
+<!-- Background image 100% width, no black line -->
+<img src="https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251204_010250_Lumii%20-%20Photo%20Editor.jpg?raw=true" alt="background" class="bg">
+
+<!-- logo pulled down 15% of its height so it sits perfectly under the image -->
+<img src="https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251203_231111_Chrome.jpg?raw=true" alt="$WOJANE" class="logo">
+
+<h1>$WOJANE</h1>
+
+<div class="content">
+  <div class="ca">
+    J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump
+    <br><br>
+    <button class="copy" onclick="copyCA()">COPY CA</button>
+  </div>
+
+  <a href="https://jup.ag/tokens/J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump" class="btn" target="_blank">BUY WOJANE</a>
+  <a href="https://x.com/WOJANE_" class="btn" target="_blank">X / TWITTER</a>
+
+  <div class="coming">
+    AMM • FARMING • NFTS • AND MORE<br>
+    COMING SOON
+  </div>
+</div>
+
+<div class="copied" id="copied">COPIED!</div>
+
+<script>
+function copyCA(){
+  navigator.clipboard.writeText("J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump");
+  document.getElementById("copied").style.opacity="1";
+  setTimeout(()=>document.getElementById("copied").style.opacity="0",1600);
+}
+</script>
+
+</body>
+</html>
