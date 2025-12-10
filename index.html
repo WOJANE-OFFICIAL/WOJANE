@@ -1,142 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$WOJANE</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Bungee&display=swap" rel="stylesheet">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{
-      font-family:'Bungee',cursive;
-      background:#fff;
-      color:#000;
-      text-align:center;
-      line-height:1.4;
-    }
-    .hero{
-      width:100%;
-      height:100vh;
-      min-height:600px;
-      background:url('https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251204_010250_Lumii%20-%20Photo%20Editor.jpg?raw=true') center/cover no-repeat;
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
-      padding-bottom:60px;
-    }
-    .logo{
-      width:82%;
-      max-width:560px;
-      margin:0 auto;
-      filter:drop-shadow(0 12px 24px rgba(0,0,0,0.5));
-    }
-    h1{
-      font-family:'Bungee Shade',cursive;
-      font-size:11rem;
-      letter-spacing:0.05em;
-      margin:60px 20px 40px;
-      color:#fff;
-      -webkit-text-stroke:9px #000;
-      paint-order:stroke fill;
-      text-shadow:12px 12px 0 #000;
-    }
-    .content{
-      padding:80px 20px 120px;
-      background:#fff;
-    }
-    .ca-box{
-      background:#000;
-      color:#fff;
-      padding:40px 30px;
-      border-radius:40px;
-      max-width:760px;
-      margin:0 auto 60px;
-      font-size:2.4rem;
-      letter-spacing:2px;
-      word-break:break-all;
-      box-shadow:0 20px 40px rgba(0,0,0,0.3);
-    }
-    .btn{
-      display:inline-block;
-      background:#000;color:#fff;
-      font-family:'Bungee',cursive;
-      font-size:3.6rem;
-      letter-spacing:3px;
-      padding:28px 70px;
-      margin:30px;
-      border-radius:60px;
-      text-decoration:none;
-      box-shadow:0 20px 40px rgba(0,0,0,0.4);
-      transition:.2s;
-    }
-    .btn:active{transform:translateY(8px);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
-    .coming{
-      font-family:'Bungee Shade',cursive;
-      font-size:5.5rem;
-      margin:100px 20px;
-      color:#000;
-      -webkit-text-stroke:6px #fff;
-      paint-order:stroke fill;
-      text-shadow:10px 10px 0 #000;
-    }
-    .copy-btn{
-      background:#fff;color:#000;
-      border:none;padding:18px 50px;
-      border-radius:50px;
-      font-family:'Bungee',cursive;
-      font-size:2.2rem;
-      margin-top:25px;
-      cursor:pointer;
-      box-shadow:0 12px 24px rgba(0,0,0,0.3);
-    }
-    .copied{
-      position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
-      background:#000;color:#fff;padding:20px 50px;
-      border-radius:40px;font-size:2.5rem;z-index:999;
-      opacity:0;transition:opacity .4s;box-shadow:0 0 30px rgba(0,0,0,0.6);
-    }
-    @media(max-width:640px){
-      h1{font-size:6.8rem;-webkit-text-stroke:6px #000;}
-      .ca-box{font-size:1.8rem;padding:30px 20px;}
-      .btn{font-size:2.6rem;padding:22px 50px;}
-      .coming{font-size:3.8rem;}
-      .hero{min-height:500px;padding-bottom:40px;}
-      .logo{width:88%}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$WOJANE</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:#fff url('https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251204_010250_Lumii%20-%20Photo%20Editor.jpg?raw=true') center top / cover no-repeat fixed;
+    font-family:'Fredoka One',cursive;
+    text-align:center;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px 20px 100px;
+  }
+  .logo{
+    width:88%;
+    max-width:560px;
+    margin:40px auto 20px;
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+  }
+  .title{
+    font-size:10rem;
+    color:#fff;
+    -webkit-text-stroke:12px #000;
+    text-stroke:12px #000;
+    paint-order:stroke fill;
+    letter-spacing:8px;
+    margin:20px 0 60px;
+  }
+  .ca-box{
+    background:#000;
+    color:#fff;
+    padding:40px 50px;
+    border-radius:50px;
+    max-width:780px;
+    width:90%;
+    font-size:2.4rem;
+    margin:40px auto;
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+  }
+  .copy-btn{
+    background:#fff;
+    color:#000;
+    border:none;
+    padding:16px 50px;
+    border-radius:50px;
+    font-size:2rem;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+  }
+  .btn{
+    display:inline-block;
+    background:#000;color:#fff;
+    font-size:3.8rem;
+    padding:28px 80px;
+    margin:30px;
+    border-radius:60px;
+    text-decoration:none;
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+  }
+  .coming{
+    font-size:6rem;
+    color:#fff;
+    -webkit-text-stroke:10px #000;
+    text-stroke:10px #000;
+    paint-order:stroke fill;
+    margin:100px 20px 0;
+    line-height:1.3;
+  }
+  .copied{
+    position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+    background:#000;color:#fff;padding:25px 60px;border-radius:50px;
+    font-size:3rem;z-index:999;opacity:0;transition:opacity .4s;
+    box-shadow:0 0 40px rgba(0,0,0,0.8);
+  }
+  @media(max-width:640px){
+    .title{font-size:6rem;-webkit-text-stroke:8px #000;}
+    .ca-box{font-size:1.8rem;padding:30px;}
+    .btn{font-size:2.8rem;padding:22px 60px;}
+    .coming{font-size:4rem;-webkit-text-stroke:7px #000;}
+  }
+</style>
 </head>
 <body>
 
-  <div class="hero">
-    <img src="https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251203_231111_Chrome.jpg?raw=true" alt="$WOJANE" class="logo">
-  </div>
+<img src="https://github.com/WOJANE-OFFICIAL/WOJANE/blob/main/Screenshot_20251203_231111_Chrome.jpg?raw=true" alt="$WOJANE" class="logo">
 
-  <h1>$WOJANE</h1>
+<div class="title">$WOJANE</div>
 
-  <div class="content">
-    <div class="ca-box">
-      J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump
-      <br><br>
-      <button class="copy-btn" onclick="copyCA()">COPY CA</button>
-    </div>
+<div class="ca-box">
+  J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump
+  <br><br>
+  <button class="copy-btn" onclick="copyCA()">COPY CA</button>
+</div>
 
-    <a href="https://jup.ag/tokens/J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump" class="btn" target="_blank">BUY WOJANE</a>
-    <a href="https://x.com/WOJANE_" class="btn" target="_blank">X / TWITTER</a>
+<a href="https://jup.ag/tokens/J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump" class="btn" target="_blank">BUY WOJANE</a>
+<a href="https://x.com/WOJANE_" class="btn" target="_blank">X / TWITTER</a>
 
-    <div class="coming">
-      AMM • FARMING • NFTS • AND MORE<br>
-      COMING SOON
-    </div>
-  </div>
+<div class="coming">
+  AMM • FARMING • NFTS • AND MORE<br>
+  COMING SOON
+</div>
 
-  <div class="copied" id="copied">COPIED!</div>
+<div class="copied" id="copied">COPIED!</div>
 
-  <script>
-    function copyCA(){
-      navigator.clipboard.writeText("J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump");
-      const t=document.getElementById("copied");t.style.opacity="1";
-      setTimeout(()=>t.style.opacity="0",1600);
-    }
-  </script>
+<script>
+function copyCA(){
+  navigator.clipboard.writeText("J32BevzEEQa4qTdoiwUkLzmSwWTR17zt3mZqaQ6cpump");
+  document.getElementById("copied").style.opacity="1";
+  setTimeout(()=>document.getElementById("copied").style.opacity="0",1600);
+}
+</script>
+
 </body>
 </html>
